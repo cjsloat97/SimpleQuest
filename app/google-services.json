@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "329980630340",
+    "firebase_url": "https://simple-quest-c288b.firebaseio.com",
+    "project_id": "simple-quest-c288b",
+    "storage_bucket": "simple-quest-c288b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329980630340:android:88b967550042b555",
+        "android_client_info": {
+          "package_name": "com.sq.questsimple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329980630340-4rei60afhbg5k3qrjhr629s0c3vgpleg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDllVfwYCTckLn2SdQsfUJmN24a7-24wTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

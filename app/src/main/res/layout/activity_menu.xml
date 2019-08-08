@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="#ffffff">
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:stateListAnimator="@null"
+        android:text="Stats"
+        android:id="@+id/button2"
+        android:onClick="onClickStats"
+        android:layout_below="@+id/button5"
+        android:layout_alignLeft="@+id/button5"
+        android:layout_alignStart="@+id/button5"
+        android:textSize="15dp"
+        android:typeface="normal"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Character"
+        android:id="@+id/button3"
+        android:onClick="onClickAchievements"
+        android:layout_above="@+id/button5"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"
+        android:textSize="15dp"
+        android:typeface="normal"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Return"
+        android:id="@+id/button4"
+        android:onClick="onClickReturn"
+        android:stateListAnimator="@null"
+        android:layout_above="@+id/button3"
+        android:layout_alignRight="@+id/button3"
+        android:layout_alignEnd="@+id/button3"
+        android:textSize="15dp"
+        android:typeface="normal"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Crafting"
+        android:id="@+id/button5"
+        android:onClick="onClickCraft"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"
+        android:textSize="15dp"
+        android:typeface="normal"/>
+</RelativeLayout>

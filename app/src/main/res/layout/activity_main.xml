@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="#ffffff">
+
+    <ProgressBar
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="350dp"
+        android:layout_height="10dp"
+        android:id="@+id/expBar"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"
+        android:progressDrawable="@drawable/progress_bar"/>
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/button"
+        android:onClick="onMenuClick"
+        android:stateListAnimator="@null"
+        android:background="@drawable/menupic"
+        android:layout_below="@+id/theAd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/theAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adUnitId="ca-app-pub-3323190746307510/4359977383"
+        ads:adSize="BANNER"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/charLevell"
+        android:layout_below="@+id/theAd"
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="true"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/prestige"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:stateListAnimator="@null"
+        android:text="Open Loot"
+        android:id="@+id/lootButton"
+        android:onClick="onOpenLootBag"
+        android:textSize="15dp"
+        android:layout_above="@+id/lootText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/lootText"
+        android:layout_above="@+id/expBar"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/givenExp"
+        android:layout_above="@+id/lootButton"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/totalExp"
+        android:layout_above="@+id/button6"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="5dp"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/monsterText"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/prestige"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Menu"
+        android:id="@+id/questButton"
+        android:paddingLeft="3dp"
+        android:typeface="normal"
+        android:layout_below="@+id/theAd"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:id="@+id/bigQuest"
+        android:layout_height="200dp"
+        android:onClick="onClickQuest"
+        android:background="@null"
+        android:layout_width="350dp"
+        android:layout_alignBaseline="@+id/givenExp"
+        android:layout_alignBottom="@+id/givenExp"
+        android:layout_alignLeft="@+id/expBar"
+        android:layout_alignStart="@+id/expBar" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:textSize="15dp"
+        android:stateListAnimator="@null"
+        android:text="Quest"
+        android:id="@+id/button6"
+        android:onClick="onClickQuest"
+        android:typeface="normal"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/lootButton"
+        android:layout_alignStart="@+id/lootButton" />
+
+</RelativeLayout>

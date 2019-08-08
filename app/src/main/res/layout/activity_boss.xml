@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="#ffffff"
+    android:clickable="true">
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/button"
+        android:onClick="onBack"
+        android:stateListAnimator="@null"
+        android:background="@drawable/arrow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="350dp"
+        android:layout_height="10dp"
+        android:id="@+id/healthBar"
+        android:typeface="normal"
+        android:progressDrawable="@drawable/progress_bar"
+        android:layout_marginTop="84dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/boss"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/healthBar"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Strength"
+        android:id="@+id/strButton"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/imageView"
+        android:layout_toLeftOf="@+id/dexButton"
+        android:layout_toStartOf="@+id/dexButton"
+        android:layout_marginRight="7dp"
+        android:stateListAnimator="@null"
+        android:typeface="normal"
+        android:textSize="13dp"
+        android:onClick="strClick" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Dexterity"
+        android:id="@+id/dexButton"
+        android:layout_alignTop="@+id/strButton"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"
+        android:typeface="normal"
+        android:textSize="13dp"
+        android:onClick="dexClick" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Intelligence"
+        android:id="@+id/inttButton"
+        android:layout_alignTop="@+id/dexButton"
+        android:layout_toRightOf="@+id/dexButton"
+        android:layout_toEndOf="@+id/dexButton"
+        android:layout_marginLeft="7dp"
+        android:stateListAnimator="@null"
+        android:typeface="normal"
+        android:textSize="13dp"
+        android:onClick="inttClick" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Fight!"
+        android:id="@+id/fightButton"
+        android:stateListAnimator="@null"
+        android:typeface="normal"
+        android:textSize="13dp"
+        android:layout_below="@+id/dexButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:onClick="onFight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Monster Level"
+        android:id="@+id/monsterLevel"
+        android:layout_below="@+id/monsterName"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Monster Name"
+        android:id="@+id/monsterName"
+        android:layout_alignBottom="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Attacking With"
+        android:id="@+id/attackType"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/healthBar"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/dexArrow"
+        android:background="@drawable/down"
+        android:clickable="false"
+        android:layout_above="@+id/dexButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/inttArrow"
+        android:background="@drawable/down"
+        android:clickable="false"
+        android:layout_above="@+id/inttButton"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/strArrow"
+        android:background="@drawable/down"
+        android:clickable="false"
+        android:layout_above="@+id/dexButton"
+        android:layout_alignLeft="@+id/strButton"
+        android:layout_alignStart="@+id/strButton"
+        android:layout_marginLeft="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="* Str > Dex, Dex > Int, Int > Str*"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/dexArrow"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:typeface="normal"/>
+
+</RelativeLayout>
