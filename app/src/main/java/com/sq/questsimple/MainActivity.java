@@ -15,9 +15,14 @@ import android.app.Activity;
 import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 
 public class MainActivity extends Activity {
+
+    private AdView mAdView;
 
     long timeCurrentSession;
     long totalSessionTime;
@@ -64,6 +69,13 @@ public class MainActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
 
         setContentView(R.layout.activity_main);
 
@@ -134,13 +146,9 @@ public class MainActivity extends Activity {
 
         monster = (TextView)findViewById(R.id.monsterText);
 
-        AdView adView = (AdView)findViewById(R.id.theAd);
-
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("59B643AFDAC58BCBB66E96F582E25A47")
-                .build();
-        adView.loadAd(adRequest);
+        mAdView = findViewById(R.id.theAd);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         prestigeDisplay = (TextView) findViewById(R.id.prestige);
         if (prestige != 0){

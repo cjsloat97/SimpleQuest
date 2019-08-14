@@ -130,23 +130,24 @@
 
     <Button
         android:id="@+id/bigQuest"
-        android:layout_height="200dp"
-        android:onClick="onClickQuest"
-        android:background="@null"
         android:layout_width="350dp"
-        android:layout_alignBaseline="@+id/givenExp"
-        android:layout_alignBottom="@+id/givenExp"
+        android:layout_height="200dp"
         android:layout_alignLeft="@+id/expBar"
-        android:layout_alignStart="@+id/expBar" />
+        android:layout_marginStart="-6dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:onClick="onClickQuest" />
 
     <Button
+        android:id="@+id/button6"
         android:layout_width="125dp"
         android:layout_height="50dp"
         android:background="@drawable/button"
         android:textSize="15dp"
         android:stateListAnimator="@null"
         android:text="Quest"
-        android:id="@+id/button6"
         android:onClick="onClickQuest"
         android:typeface="normal"
         android:layout_centerVertical="true"
